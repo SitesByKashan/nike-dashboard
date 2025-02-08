@@ -1,6 +1,7 @@
 "use client"
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { 
   LayoutDashboard, 
@@ -44,8 +45,14 @@ const Sidebar = () => {
   return (
     <div className="flex h-screen w-64 flex-col fixed left-0 top-0 bg-white border-r">
       {/* Logo/Header */}
-      <div className="p-6 border-b">
-        <h1 className="text-xl font-bold">Food Dashboard</h1>
+      <div className="p-6 border-b flex">
+        <Image 
+        src="/assets/Nike.png"
+        width={50}
+        height={50}
+        alt="Nike"
+        />
+        <h1 className="text-4xl font-bold">Nike</h1>
       </div>
 
       {/* Navigation */}
