@@ -6,9 +6,9 @@ import { usePathname } from 'next/navigation';
 import { 
   LayoutDashboard, 
   Users, 
-  ChefHat, 
+  CopyPlus, 
   ShoppingBag,
-  FileText
+  ListOrdered
 } from 'lucide-react';
 
 const Sidebar = () => {
@@ -21,24 +21,24 @@ const Sidebar = () => {
       href: '/'
     },
     {
+      label: 'Add Products',
+      icon: <CopyPlus className="w-5 h-5" />,
+      href: '/Add-Products'
+    },
+    {
       label: 'Products',
       icon: <ShoppingBag className="w-5 h-5" />,
       href: '/Products'
-    },
+    }, 
     {
-      label: 'Add Products',
-      icon: <ChefHat className="w-5 h-5" />,
-      href: '/Add-Products'
+      label: 'Orders',
+      icon: <ListOrdered className="w-5 h-5" />,
+      href: '/Orders'
     },
     {
       label: 'Users',
       icon: <Users className="w-5 h-5" />,
       href: '/Users'
-    },
-    {
-      label: 'Orders',
-      icon: <FileText className="w-5 h-5" />,
-      href: '/Orders'
     }
   ];
 

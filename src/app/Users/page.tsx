@@ -1,9 +1,10 @@
 import React from 'react'
+import User from '@/components/Users'
 
 export default function Users() {
   return (
     <div>
-      <h1>Users</h1>
+      <User/>
     </div>
   )
 }
