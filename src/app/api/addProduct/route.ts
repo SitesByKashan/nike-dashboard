@@ -34,10 +34,10 @@ export async function POST(req: NextRequest) {
 
     let imageRef = null;
     if (image) {
-      console.log("📷 Uploading Image...");
+      // console.log("📷 Uploading Image...");
       const imageUpload = await client.assets.upload("image", image);
       imageRef = { _type: "image", asset: { _ref: imageUpload._id } };
-      console.log("✅ Image Uploaded:", imageUpload._id);
+      // console.log("✅ Image Uploaded:", imageUpload._id);
     }
 
     // ✅ Create Product in Sanity
