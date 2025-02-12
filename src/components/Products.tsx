@@ -20,8 +20,8 @@ export default async function Product() {
               category,
               price,
               inventory,
-              colors,
               status,
+              colors,
               "imageUrl": image.asset->url,
               description
             }`
