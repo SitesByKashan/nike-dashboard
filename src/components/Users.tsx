@@ -19,8 +19,8 @@ export default async function Users() {
       lastName,
       dateOfBirth,
       country,
-      gender,
-      subscribe
+      subscribe,
+      gender
     }
   `);
 
