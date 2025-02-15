@@ -4,7 +4,6 @@ import { client } from '@/lib/client';
 import {
     Table,
     TableBody,
-    TableCaption,
     TableCell,
     TableHead,
     TableHeader,
@@ -67,17 +66,13 @@ export default function Orders() {
             return updatedStatuses;
         });
     };
-    
-    
-
 
     return (
-        <div className="p-6 space-y-6 bg-gray-50 min-h-screen">
-            <h1 className="text-3xl font-bold text-gray-900">Orders List</h1>
-
-            <Table className="bg-white shadow-md rounded-lg overflow-hidden">
-                <TableCaption>List of all available products</TableCaption>
-
+        <div className="min-h-screen lg:w-[75vw] w-[88vw] flex items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 p-6 rounded-3xl">
+    <div className="lg:min-h-screen h-[90vh] w-[90vw] bg-gray-50 rounded-3xl overflow-x-auto p-6">
+        <h1 className="text-3xl font-bold text-gray-900 mb-6">Orders List</h1>
+        <div className="overflow-x-auto">
+            <Table className="lg:w-full w-[200vw] bg-white shadow-md rounded-lg overflow-hidden">
                 {/* ✅ Table Header */}
                 <TableHeader>
                     <TableRow className="bg-gray-100">
@@ -149,5 +144,8 @@ export default function Orders() {
                 </TableBody>
             </Table>
         </div>
+    </div>
+</div>
+
     );
 }

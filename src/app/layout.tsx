@@ -29,14 +29,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white`}
       >
         <div className="flex">
       {/* Sidebar */}
       <Sidebar />
 
       {/* Main Content Area */}
-      <div className="flex-1 ml-64 p-6">
+      <div className="lg:flex-1 lg:ml-64 p-6 lg:mt-0 mt-20">
         {children}
         <ToastContainer position="top-right" autoClose={3000} />
       </div>
