@@ -81,7 +81,6 @@ import React, { useEffect, useState } from 'react';
 import {
     Table,
     TableBody,
-    TableCaption,
     TableCell,
     TableHead,
     TableHeader,
@@ -115,9 +114,9 @@ export default function Product() {
     const [products, setProducts] = useState<Product[]>([]);
     const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
     const [open, setOpen] = useState(false);
-    const [loading, setLoading] = useState(false);
-    const [imageFile, setImageFile] = useState<File | null>(null);
-    const [newColor, setNewColor] = useState("");
+    const [, setLoading] = useState(false);
+    const [imageFile] = useState<File | null>(null);
+
 
     useEffect(() => {
         const fetchData = async () => {
@@ -257,7 +256,8 @@ export default function Product() {
                             <Input name="productName" value={selectedProduct.productName} onChange={handleInputChange} placeholder="Product Name" />
                             <Input name="category" value={selectedProduct.category} onChange={handleInputChange} placeholder="Category" />
                             <Input name="price" type="number" value={selectedProduct.price} onChange={handleInputChange} placeholder="Price" />
-                            <Textarea name="description" value={selectedProduct.description} onChange={handleInputChange} placeholder="Description" />
+                            <Input name="colors" value={selectedProduct.colors} onChange={handleInputChange} placeholder="Colors" />
+                            <Textarea name="description" value={selectedProduct.description} onChange={handleInputChange} placeholder="Description" />           
                             <div className="flex items-center space-x-2">
                                 <span>Status:</span>
                                 <Switch checked={selectedProduct.status === "In Stock"} onCheckedChange={handleStatusToggle} />
